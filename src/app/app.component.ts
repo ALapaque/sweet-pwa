@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavItem } from './nav-item.model';
+import { NavService } from './nav.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sweet-pwa';
+  public navItems: Array<NavItem> = this._navService.navItems;
+
+  constructor(private _navService: NavService) {}
 }
