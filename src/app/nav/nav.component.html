@@ -3,6 +3,10 @@
                 [item]="item">
   </app-nav-item>
 
-  <div class="indicator"></div>
+
+  <div *ngIf="navService.leftOffset$ | async as leftOffset"
+       class="indicator"
+       [style.transform]="'translateX(' + leftOffset + ')'">
+  </div>
 </div>
 

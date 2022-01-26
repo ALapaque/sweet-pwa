@@ -30,6 +30,13 @@ app-nav {
   border-radius: 1.5rem 1.5rem 0 0;
 }
 
+app-nav div.container {
+  display: flex;
+  place-content: flex-start space-between;
+  flex-flow: row nowrap;
+  width: calc(100% - 5rem);
+}
+
 app-nav div.container app-nav-item.nav-item {
   position: relative;
   list-style: none;
@@ -77,26 +84,6 @@ app-nav div.container app-nav-item.nav-item div .text {
 app-nav div.container app-nav-item.nav-item.active div .text {
   opacity: 1;
   transform: translateY(0.625rem);
-}
-
-app-nav div.container app-nav-item.nav-item:nth-child(1).active ~ .indicator {
-  transform: translateX(calc(4.375rem * 0));
-}
-
-app-nav div.container app-nav-item.nav-item:nth-child(2).active ~ .indicator {
-  transform: translateX(calc(4.375rem * 1));
-}
-
-app-nav div.container app-nav-item.nav-item:nth-child(3).active ~ .indicator {
-  transform: translateX(calc(4.375rem * 2));
-}
-
-app-nav div.container app-nav-item.nav-item:nth-child(4).active ~ .indicator {
-  transform: translateX(calc(4.375rem * 3));
-}
-
-app-nav div.container app-nav-item.nav-item:nth-child(5).active ~ .indicator {
-  transform: translateX(calc(4.375rem * 4));
 }
 
 .indicator {
