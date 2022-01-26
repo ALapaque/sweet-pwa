@@ -37,6 +37,10 @@ app-nav div.container {
   width: calc(100% - 5rem);
 }
 
+app-nav div.container app-nav-item:hover {
+  cursor: pointer;
+}
+
 app-nav div.container app-nav-item.nav-item {
   position: relative;
   list-style: none;
